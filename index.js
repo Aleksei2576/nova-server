@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const cors = require('cors');
+const port = process.env.PORT || 3000
 
 const app = express()
 
@@ -37,6 +38,6 @@ app.post('/send-email', (req, res) => {
 	})
 })
 
-app.listen(3334, () => {
+app.listen(port, () => {
     console.log('Application listening on port 3333!')
 })
